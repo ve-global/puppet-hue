@@ -1,0 +1,22 @@
+{
+  "name": "ve-hue",
+  "version": "0.1.0",
+  "author": "Alejandro Montero",
+  "summary": "A module to install and configure HUE",
+  "license": "Apache 2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem":"RedHat",
+      "operatingsystemrelease": [
+        "7.0"
+      ]
+    }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-inifile", "version_requirement":">= 1.4.2"}
+  ]
+}

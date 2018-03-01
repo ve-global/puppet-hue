@@ -1,0 +1,15 @@
+[[Unit]
+Description=hue service
+
+[Service]
+Type=simple
+User=<%= scope.lookupvar('hue::hue_user') %>
+Group=<%= scope.lookupvar('hue::hue_goup') %>
+<% if scope.lookupvar('hue::extra_classpath') != :undef -%>
+Environment="CLASSPATH=<%= scope.lookupvar('hue::extra_classpath') %>"
+<% end -%>
+Restart=always
+ExecStart=<%= scope.lookupvar('hue::hue_bin_dir') %>/supervisor
+
+[Install]
+WantedBy=multi-user.target
